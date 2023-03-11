@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="https://kit.fontawesome.com/fcb7e85209.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="screen">
+            <p id="operation">0</p>
+        </div>
+
+        <div class="buttons">
+            <button class="button empty"></button>
+            <button class="button empty"></button>
+            <button class="button" id="delete">C</button>
+            <button class="button" id="reset">AC</button>
+
+            <button class="button number">7</button>
+            <button class="button number">8</button>
+            <button class="button number">9</button>
+            <button class="button" id="divide" value="%2f">
+                <i class="fa-solid fa-divide"></i>
+            </button>
+
+            <button class="button number">4</button>
+            <button class="button number">5</button>
+            <button class="button number">6</button>
+            <button class="button" id="multiply" value="*">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <button class="button number">1</button>
+            <button class="button number">2</button>
+            <button class="button number">3</button>
+            <button class="button" id="subtract" value="-">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+
+            <button class="button number">0</button>
+            <button class="button" id="decimal">.</button>
+            <button class="button" id="equal">
+                <i class="fa-solid fa-equals"></i>
+            </button>
+            <button class="button" id="add" value="+">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+    </div>
+</body>
+<script src="./app.js"></script>
+
+</html>
