@@ -16,13 +16,20 @@ let operation = "";
 
 //? Clear screen data
 
-//TODO: HACER QUE NO SE PUEDA BORRAR SOLO 1 SI YA SE CLICO EN IGUAL
 const deleteData = () => {
     if (screen.textContent !== "0") {
-        let text = screen.textContent;
-        screen.textContent = text.slice(0, -1);
-        operation = text.slice(0, -1);
+        console.log(screen.textContent.length);
+        if (screen.textContent.length !== 1) {
+            let text = screen.textContent;
+            screen.textContent = text.slice(0, -1);
+            operation = text.slice(0, -1);
+        } else {
+            screen.textContent = "0";
+            operation = "";
+        };
+
         isDecimal = false;
+
     }
 };
 
