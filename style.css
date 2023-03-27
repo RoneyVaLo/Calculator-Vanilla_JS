@@ -1,72 +1,90 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    *background: #0a0a0a;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
 .calculator {
-    background-color: #0f03b1;
-    width: 40%;
-    max-width: 100em;
-    margin: 10% auto;
-    padding: 2em;
-    border: none;
-    border-radius: 10px;
+	background-color: #252526;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	margin: 50px auto;
+	max-width: 350px;
+	overflow: hidden;
+	width: 100%;
 }
 
-.screen {
-    font-family: monospace;
-    font-size: clamp(1em, 1.5vw, 2em);
-    text-align: right;
-    width: 90%;
-    padding: .5em 1em;
-    margin: .5em auto;
-    border: 2px solid #A9A9A9;
-    background-color: #fff;
+.display {
+	background-color: #3c3c3e;
+	color: white;
+	font-size: 2em;
+	padding: 20px;
+	text-align: right;
 }
 
 .buttons {
-    *background-color: green;
-    margin: .5em auto;
-    width: 100%;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 6px;
-    grid-row-gap: 6px;
-    justify-content: center;
-    padding: 1em;
+	display: grid;
+	grid-gap: 1px;
+	grid-template-columns: repeat(4, 1fr);
 }
 
-.button {
-    padding: .8em .5em;
-    cursor: pointer;
-    background-color: #06c006;
-    color: #fff;
-    border: 1px solid #000;
-    border-radius: 10px;
+button {
+	background-color: #5c5c5e;
+	border: none;
+	color: white;
+	font-size: 1.5em;
+	padding: 20px;
+	transition: all 0.2s;
+	cursor: pointer;
 }
 
-.button:active {
-    transform: scale(.9);
+button:hover {
+	background-color: #7c7c7e;
 }
 
-.empty {
-    border: none;
-    background: none;
-    cursor: default;
+button:active {
+	transform: translateY(1px);
 }
 
-#equal {
-    background-color: #0565c5;
+button:focus {
+	outline: none;
 }
 
-#delete, #reset {
-    background-color: #FF0000;
+button#delete {
+	background-color: #9c9c9e;
 }
 
+button#reset {
+	background-color: #9c9c9e;
+	color: #ff2d55;
+}
+
+button#clear:hover,
+button#all-clear:hover {
+	background-color: #bcbcbc;
+}
+
+button#clear:active,
+button#all-clear:active {
+	transform: translateY(1px);
+}
+
+
+@media (max-width: 768px) {
+	.calculator {
+		margin: 30px auto;
+	}
+}
+
+@media (max-width: 500px) {
+	.calculator {
+		margin: 20px auto;
+		max-width: 300px;
+	}
+}
+
+@media (max-width: 400px) {
+	.buttons {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
